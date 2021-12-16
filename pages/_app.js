@@ -46,9 +46,7 @@ function MyApp({ Component, pageProps }) {
   const [dark, setDark] = useState(false);
 
   const theme = createTheme(
-
-      dark ? getDesignTokens('dark') : getDesignTokens('light')
-    
+      dark ? getDesignTokens('light') : getDesignTokens('dark')
     );
 
   return (

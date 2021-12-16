@@ -5,7 +5,10 @@
   overflow:hidden;
  
 }
-
+a{
+  text-decoration: none;
+  
+}
 :root{
   --base: #60FCF1
 }
@@ -39,4 +42,7 @@ body{
 .section{
   scroll-snap-align: start;
   height: 100vh;
+}
+.container::-webkit-scrollbar {
+  display: none;
 }
