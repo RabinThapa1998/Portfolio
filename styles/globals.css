@@ -1,13 +1,16 @@
 *{
   padding:'0';
   margin:'0';
+  box-sizing: border-box;
+  overflow:hidden;
  
 }
+
 :root{
   --base: #60FCF1
 }
-body{
 
+body{
   color: var(--base) !important;
 }
 
@@ -25,4 +28,15 @@ body{
 }
 .layer12{
   background-image: url('/layer12.svg');
+}
+
+.container{
+  height: 100vh;
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+}
+
+.section{
+  scroll-snap-align: start;
+  height: 100vh;
 }
