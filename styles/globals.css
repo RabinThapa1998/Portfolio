@@ -46,3 +46,16 @@ body{
 .container::-webkit-scrollbar {
   display: none;
 }
+
+.loop{
+  animation: bgloop 5s infinite ease-in-out forwards;
+ }
+
+
+@keyframes bgloop {
+  0% {  background-image: url('/loop1.svg');}
+  25% { background-image: url('/loop2.svg');}
+  50% { background-image: url('/loop3.svg');}
+  90% { background-image: url('/loop4.svg');}
+  100% { background-image: url('/loop1.svg');}
+}

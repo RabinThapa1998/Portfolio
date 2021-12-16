@@ -26,6 +26,13 @@ export default function Home() {
             <Typography variant='body2' textAlign='center'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Assumenda velit nemo repellendus ratione temporibus maxime, odio in obcaecati consequatur itaque ipsum asperiores dolor eius necessitatibus commodi suscipit! Incidunt dolorum sapiente, dolores quidem dolorem laboriosam veniam officiis corrupti neque ipsam! A ipsam numquam minima officiis deleniti asperiores placeat quas eligendi quod.</Typography>
           </Box>
         </Container>
+
+        <Container  className='bg loop section'>
+          <Box color={"common.white"}>
+            <Typography variant='h1' sx={{ fontWeight: '700', textAlign: 'center', pt: 10, pb: 2, fontSize: '10rem' }}>Hello</Typography>
+            <Typography variant='body2' textAlign='center'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Assumenda velit nemo repellendus ratione temporibus maxime, odio in obcaecati consequatur itaque ipsum asperiores dolor eius necessitatibus commodi suscipit! Incidunt dolorum sapiente, dolores quidem dolorem laboriosam veniam officiis corrupti neque ipsam! A ipsam numquam minima officiis deleniti asperiores placeat quas eligendi quod.</Typography>
+          </Box>
+        </Container>
       </Container>
 
     </>
