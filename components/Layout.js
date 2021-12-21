@@ -6,12 +6,11 @@ const Layout = ({children}) => {
     return ( 
         <Paper elevation={0}>
         <CssBaseline/>
-            <Header/>
+            {/* <Header/> */}
             <Box sx={{mt:0}}>
             {children}
             </Box>
         </Paper>
-
      );
 }
  
