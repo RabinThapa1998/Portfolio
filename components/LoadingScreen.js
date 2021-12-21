@@ -37,7 +37,7 @@ const LoadingScreen = () => {
             />
             <animated.div 
                 style={{fontWeight:'500',fontSize:'50px', textAlign:'center', ...styles2}}
-            ><Typography variant='h2' sx={{color:'red'}}>RBT</Typography></animated.div>
+            ><Typography variant='h2' sx={{color:'red', fontWeight:'700'}}>RBT</Typography></animated.div>
             </div>
         </div>
     );

@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
 import Image from 'next/image'
-import { AppBar, Typography, Box, CssBaseline, Grid, Paper, Item, Card, CardContent, Divider, Avatar, Stack, Container, Button } from "@mui/material";
+import { AppBar, Typography, Box, CssBaseline, Grid, Paper, Item, Card, CardContent, Divider, Avatar, Stack, Container, Button, Hidden } from "@mui/material";
 import { BG } from '../components/svgfiles';
 import { useSpring, animated } from 'react-spring';
 import { useState } from 'react';
@@ -23,31 +23,31 @@ export default function Home() {
         <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap" rel="stylesheet" />
       </Head>
 
-      <Container maxWidth={'lg'} sx={{ height: '100vh', color: 'text.primary' }} className='container'>
-        <Container maxWidth={'md'} color='text.primary' sx={{ position: 'absolute', top: '0' }}>
+      <Container maxWidth={'lg'} sx={{ height: '100vh', color: 'text.primary',position:'relative',p:0 }}  className='container'>
+        <Container maxWidth={'lg'} color='text.primary' sx={{ position: 'absolute', top: '0' ,p:0, m:0}}>
           <Stack direction={'horizontal'}>
             <Link href="#home">
              <a>
 
-             <Typography variant="h5" px={{ sm: 2 }} >Home</Typography>
+             <Typography variant="h5" px={{ xs:2 }} >Home</Typography>
              </a> 
             </Link>
             <Link href="#about">
             <a>
 
-              <Typography variant="h5" px={{ sm: 2 }}>About</Typography>
+              <Typography variant="h5" px={{ xs: 2 }}>About</Typography>
             </a>
             </Link>
             <Link href="#resume">
             <a>
 
-              <Typography variant="h5" px={{ sm: 2 }}>Resume</Typography>
+              <Typography variant="h5" px={{ xs: 2 }}>Resume</Typography>
             </a>
             </Link>
             <Link href="#services">
             <a>
               
-              <Typography variant="h5" px={{ sm: 2 }}>Services</Typography>
+              <Typography variant="h5" px={{ xs: 2 }}>Services</Typography>
             </a>
             </Link>
           </Stack>
