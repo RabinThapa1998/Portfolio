@@ -24,6 +24,7 @@ body{
 .headingfontsize{
   font-size: clamp(5rem,10vw,7rem);
 }
+.invert { filter: invert(100%); }
 
 .bg{ 
   aspect-ratio: 900/300;
