@@ -17,9 +17,10 @@ a{
   --base: #60FCF1
 }
 
-/* body{
-  color: var(--base) !important;
-} */
+body{
+  margin: 0 !important;
+}
+
 .headingfontsize{
   font-size: clamp(5rem,10vw,7rem);
 }
