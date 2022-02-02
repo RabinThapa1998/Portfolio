@@ -20,6 +20,9 @@ a{
 /* body{
   color: var(--base) !important;
 } */
+.headingfontsize{
+  font-size: clamp(5rem,10vw,7rem);
+}
 
 .bg{ 
   aspect-ratio: 900/300;
@@ -69,3 +72,14 @@ a{
   90% { background-image: url('/loop4.svg');}
   100% { background-image: url('/loop1.svg');}
 } */
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.example::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.example {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}

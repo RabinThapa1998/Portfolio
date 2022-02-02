@@ -24,9 +24,9 @@ export default function Home() {
         <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap" rel="stylesheet" />
       </Head>
 
-      <Container>
-        <Container color='text.primary' sx={{ position: 'absolute', top: '10', p: 0, m: 0, zIndex: 1000, width: '100vw' }}>
-          <Box sx={{ width: '100%' }}>
+      <Container sx={{width:'100vw', p:0}} className='example'>
+        <Container color='text.primary' sx={{ position: 'absolute', top: '10', p: 0, m: 0, zIndex: 1000, width: '100%' }}>
+          <Box sx={{ width: '100%' ,m:0,p:0}}>
             <Stack direction={'horizontal'} >
               <Link href="#home">
                 <a>
@@ -55,10 +55,10 @@ export default function Home() {
         <Container maxWidth={'lg'} sx={{ height: '100vh', color: 'text.primary', position: 'relative', p: 0 }} className='container'>
 
 
-          <Container className='bg layer1 section' id="home" >
+          <Container className='bg layer1 section' id="home" sx={{p:0,m:0}}>
             <Box color={"common.white"} sx={{ mt: 20 }}>
               <Stack direction="row" spacing={2} sx={{ justifyContent: 'center' }}>
-                <Typography component='h1' variant='h1' sx={{ fontWeight: '700', alignSelf: 'center', p: 0, m: 0, fontSize: '7rem', color: '#ccc' }}>rabin</Typography>
+                <Typography component='h1' variant='h1' sx={{ fontWeight: '700', alignSelf: 'center', p: 0, m: 0, color: '#ccc' }} className='headingfontsize'>rabin</Typography>
                 <Avatar alt="Rabin Thapa" src="/img/pp.jpg" sx={{ width: 150, height: 150, alignSelf: 'center' }} />
               </Stack>
               <Typography component='h3' variant="h3" sx={{ textAlign: 'center', fontWeight: '500', color: '#ccc' }}>An IT Enthusiast</Typography>
@@ -68,7 +68,7 @@ export default function Home() {
 
           <Container className='bg  layer12 section' id='about' >
             <Box color={"common.white"}>
-              <Typography variant='h2' sx={{ fontWeight: '700', textAlign: 'center', pt: 3, pb: 12, fontSize: '7rem', color: '#ccc' }}>About</Typography>
+              <Typography variant='h2' sx={{ fontWeight: '700', textAlign: 'center', pt: 3, pb: 12, color: '#ccc' }} className='headingfontsize'>About</Typography>
               {/* <Typography variant='h2' textAlign='center'>I am a Computer Engineering Graduate.</Typography>
             <Typography variant='h4' textAlign='center'>.</Typography> */}
               <Stack direction={'row'} sx={{ justifyContent: 'space-around', color: '#ccc' }} divider={<Divider orientation="vertical" flexItem variant='middle' />}>
@@ -95,7 +95,7 @@ export default function Home() {
 
           <Container className='bg loop section resumebg' id='resume'>
             <Box>
-              <Typography variant='h1' sx={{ fontWeight: '700', textAlign: 'center', pt: 3, pb: 0, fontSize: '7rem', color: '#ccc' }}>Resume</Typography>
+              <Typography variant='h1' sx={{ fontWeight: '700', textAlign: 'center', pt: 3, pb: 0, color: '#ccc' }} className='headingfontsize'>Resume</Typography>
               <Typography variant='h5' sx={{ textAlign: 'center', pb: 2 }} color='text.secondary'>I've worked in several platform during my Engineering. <br /> These experiences helped me improve the problem solving abilities and team work capabilities</Typography>
             </Box>
             <Box>
@@ -132,7 +132,7 @@ export default function Home() {
           </Container>
           <Container className='bg section' id='services'>
             <Box>
-              <Typography variant='h1' sx={{ fontWeight: '700', textAlign: 'center', pt: 3, pb: 0, fontSize: '7rem', color: '#ccc' }}>Services</Typography>
+              <Typography variant='h1' sx={{ fontWeight: '700', textAlign: 'center', pt: 3, pb: 0, color: '#ccc' }} className='headingfontsize'>Services</Typography>
               <Typography variant='h5' sx={{ textAlign: 'center', pb: 2 }} color='text.secondary'>You can hire me for the following works.</Typography>
             </Box>
             <Box>
