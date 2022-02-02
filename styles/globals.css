@@ -6,7 +6,7 @@
   overflow:hidden;
 }
 html{
-  background-color: black;
+  background-color: #001220;
 
 }
 a{
@@ -17,9 +17,9 @@ a{
   --base: #60FCF1
 }
 
-body{
+/* body{
   color: var(--base) !important;
-}
+} */
 
 .bg{ 
   aspect-ratio: 900/300;
@@ -35,6 +35,10 @@ body{
 }
 .layer12{
   background-image: url('/layer12.svg');
+}
+
+.resumebg{
+  background-color: #001220;
 }
 
 .container{
@@ -58,10 +62,10 @@ body{
  }
 
 
-@keyframes bgloop {
+/* @keyframes bgloop {
   0% {  background-image: url('/loop1.svg');}
   25% { background-image: url('/loop2.svg');}
   50% { background-image: url('/loop3.svg');}
   90% { background-image: url('/loop4.svg');}
   100% { background-image: url('/loop1.svg');}
-}
+} */

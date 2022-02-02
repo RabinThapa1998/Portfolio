@@ -29,14 +29,14 @@ const getDesignTokens = (mode) => (
         : {
           // palette values for dark mode
           primary: deepOrange,
-          divider: deepOrange[700],
+          divider: '#60FCF1',
           background: {
             default: '#000',
             paper: '#000',
           },
           text: {
             primary: '#60FCF1',
-            secondary: grey[500],
+            secondary: "#C62368",
           },
         }),
     },
