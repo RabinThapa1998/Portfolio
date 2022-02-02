@@ -11,5 +11,8 @@ module.exports = {
       use: '@svgr/webpack'
     })
     return config
-  }
+  },
+  
+  swcMinify: false // it should be false by default 
+    
 }

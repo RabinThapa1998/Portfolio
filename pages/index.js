@@ -6,7 +6,8 @@ import { BG } from '../components/svgfiles';
 import { useSpring, animated } from 'react-spring';
 import { useState } from 'react';
 import Link from 'next/link';
-
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation, Pagination, Scrollbar, A11y, Autoplay, EffectFade, EffectCards } from 'swiper';
 
 export default function Home() {
   const [cancel, setCancel] = useState(false)
@@ -24,28 +25,28 @@ export default function Home() {
         <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap" rel="stylesheet" />
       </Head>
 
-      <Container sx={{ width: '100vw', p: 0 }} className='example'>
+      <Container sx={{ width: '100vw', p: 0 }} className='parent' >
         <Container color='text.primary' sx={{ position: 'absolute', top: '10', p: 0, m: 0, zIndex: 1000, width: '100%' }}>
           <Box sx={{ width: '100%', m: 0, p: 0 }}>
             <Stack direction={'horizontal'} >
               <Link href="#home">
-                <a>
-                  <Typography variant="h5" px={{ xs: 2 }} sx={{ color: 'white' }} >Home</Typography>
+                <a className='linkhover'>
+                  <Typography variant="h5" px={{ xs: 2 }} >Home</Typography>
                 </a>
               </Link>
               <Link href="#about">
-                <a>
-                  <Typography variant="h5" px={{ xs: 2 }} sx={{ color: 'white' }}>About</Typography>
+                <a className='linkhover'>
+                  <Typography variant="h5" px={{ xs: 2 }} >About</Typography>
                 </a>
               </Link>
               <Link href="#resume">
-                <a>
-                  <Typography variant="h5" px={{ xs: 2 }} sx={{ color: 'white' }}>Resume</Typography>
+                <a className='linkhover'>
+                  <Typography variant="h5" px={{ xs: 2 }} >Resume</Typography>
                 </a>
               </Link>
               <Link href="#services">
-                <a>
-                  <Typography variant="h5" px={{ xs: 2 }} sx={{ color: 'white' }}>Services</Typography>
+                <a className='linkhover'>
+                  <Typography variant="h5" px={{ xs: 2 }} >Services</Typography>
                 </a>
               </Link>
             </Stack>
@@ -56,38 +57,45 @@ export default function Home() {
 
 
           <Container className='bg layer1 section' id="home" sx={{ p: 0, m: 0 }}>
-            <Box color={"common.white"} sx={{ mt: 20 }}>
+            <Box color={"common.white"} >
               <Stack direction="row" spacing={2} sx={{ justifyContent: 'center' }}>
-                <Typography component='h1' variant='h1' sx={{ fontWeight: '700', alignSelf: 'center', p: 0, m: 0, color: '#ccc' }} className='headingfontsize'>rabin</Typography>
-                <Avatar alt="Rabin Thapa" src="/img/pp.jpg" sx={{ width: 150, height: 150, alignSelf: 'center' }} />
+                {/* <Typography variant='h2' sx={{ fontWeight: '700', alignSelf: 'center', p: 0, m: 0, color: '#ccc' }} className='headingfontsize'>rabin</Typography> */}
+                <Avatar alt="Rabin Thapa" src="/img/pp.jpg" sx={{ width: 170, height: 170, alignSelf: 'center', mt:15 }} />
               </Stack>
-              <Typography  variant="h5" sx={{ textAlign: 'center', fontWeight: '500', color: '#ccc' }}>An IT Enthusiast</Typography>
-              <Typography variant='h6' sx={{ textAlign: 'center', pt:5}} color='#fdfdfd'>"I've worked in several platform during my Engineering. <br /> These experiences helped me improve the problem solving abilities and team work capabilities"</Typography>
+              <Typography variant="h5" sx={{ textAlign: 'center', fontWeight: '500', color: '#ccc' }}>An IT Enthusiast</Typography>
+              <Typography variant='h5' sx={{ textAlign: 'center', pt: 5 }} color='#fdfdfd'>"It's never too late, It's never too early"</Typography>
             </Box>
-            
-            <Stack direction={'row'} spacing={4} sx={{ color: '#ccc', justifyContent: 'center',alignItems:'end',mt:8}} >
-                <Box>
-                <a href="https://www.instagram.com/rabin.bikram.thapa/"  target="_blank">
-                  <Avatar alt="html" src="/img/instagram.png" sx={{ width: 50, height: 50, alignSelf: 'center' }}  variant="square" />
+            <Stack direction={'row'} spacing={{lg:3, xs:1}} sx={{ color: '#899499', justifyContent: 'center', alignItems: 'end', mt: 1,p:1 ,fontSize:'.9rem'}} divider={<Divider orientation="vertical" flexItem variant='middle' />}>
+              <Typography variant='h6'>CODING</Typography>
+              <Typography variant='h6'>PHOTOGRAPHY</Typography>
+              <Typography variant='h6'>STOCK MARKET</Typography>
+              <Typography variant='h6'>SINGING</Typography>
+              <Typography variant='h6'>ART</Typography>
+            </Stack>
+
+            <Stack direction={'row'} spacing={4} sx={{ color: '#ccc', justifyContent: 'center', alignItems: 'end', mt: 5 }} >
+              <Box>
+                <a href="https://www.instagram.com/rabin.bikram.thapa/" target="_blank">
+                  <Avatar alt="html" src="/img/instagram.png" sx={{ width: 50, height: 50, alignSelf: 'center' }} variant="square" />
                 </a>
-                </Box>
-                <Box >
+              </Box>
+              <Box >
                 <a href="https://www.facebook.com/rabin.thapa.3979489" target="_blank">
-                  <Avatar alt="html" src="/img/facebook.png" sx={{ width:50, height: 50, alignSelf: 'center' }}  variant="square" />
+                  <Avatar alt="html" src="/img/facebook.png" sx={{ width: 50, height: 50, alignSelf: 'center' }} variant="square" />
                 </a>
-                </Box>
-                <Box >
+              </Box>
+              <Box >
                 <a href="https://github.com/RabinThapa1998" target="_blank">
-                  <Avatar alt="html" src="/img/github.png" sx={{ width: 50, height: 50, alignSelf: 'center' }}  variant="square" />
+                  <Avatar alt="html" src="/img/github.png" sx={{ width: 50, height: 50, alignSelf: 'center' }} variant="square" />
                 </a>
-                </Box>
-                <Box >
+              </Box>
+              <Box >
                 <a href="https://twitter.com/imrabin1998" target="_blank">
-                  <Avatar alt="html" src="/img/twitter.png" sx={{ width: 50, height: 50, alignSelf: 'center'}}  variant="square" />
+                  <Avatar alt="html" src="/img/twitter.png" sx={{ width: 50, height: 50, alignSelf: 'center' }} variant="square" />
                 </a>
-                </Box>
-                  
-                </Stack>
+              </Box>
+
+            </Stack>
           </Container>
 
 
@@ -114,80 +122,152 @@ export default function Home() {
                   <Typography variant='h5' sx={{ fontWeight: 200 }}>- BOOTSTRAP</Typography>
                   <Typography variant='h5' sx={{ fontWeight: 200 }}>- GIT HUB</Typography>
                 </Stack>
+           
               </Stack>
             </Box>
           </Container>
 
           <Container className='bg loop section resumebg' id='resume'>
             <Box>
-              <Typography variant='h1' sx={{ fontWeight: '700', textAlign: 'center', pt: 3, pb: 0, color: '#ccc' }} className='headingfontsize'>Resume</Typography>
+              <Typography variant='h2' sx={{ fontWeight: '700', textAlign: 'center', pt: 3, pb: 0, color: '#ccc' }} className='headingfontsize'>Resume</Typography>
             </Box>
             <Box>
               <Typography variant='h4' sx={{ fontWeight: 400, pb: 3, textAlign: 'center', color: 'text.secondary' }}> <ins>Project Experiences</ins> </Typography>
-              <Stack direction={'column'} sx={{ alignItems:'left', color: '#ccc' }} >
-                <Stack direction={'row'} spacing={3} sx={{ color: '#ccc' }} divider={<Divider orientation="vertical" flexItem variant='middle' />}>
-                  <Typography variant='h4' sx={{ fontWeight: 400 }}>Front End</Typography>
-                  <Typography variant='h5' sx={{ fontWeight: 200 }}>TELEMEDICINE
+              {/* <Stack direction={'column'} sx={{ alignItems: 'left', color: '#ccc' }} >
+                <Stack direction={'row'} spacing={{ lg: 3, xs: 1 }} sx={{ color: '#ccc' }} divider={<Divider orientation="vertical" flexItem variant='middle' />}>
+                  <Typography variant='h5' sx={{ fontWeight: 400 }}>Front End</Typography>
+                  <Typography variant='h6' sx={{ fontWeight: 200 }}>TELEMEDICINE
                     <a href="https://rural-telemedicine.herokuapp.com/" target="_blank"> (rural-telemedicine.herokuapp.com)</a><br />React JS, Bootstrap
                   </Typography>
-                  <Typography variant='h5' sx={{ fontWeight: 200 }}>MORANG HOSPITAL
+                  <Typography variant='h6' sx={{ fontWeight: 200 }}>MORANG HOSPITAL
                     <a href="https://moranghospital.netlify.app" target="_blank"> (moranghospital.netlify.app)</a> <br />Next JS, Material UI</Typography>
-                  <Typography variant='h5' sx={{ fontWeight: 200 }}>PERSONAL WEBSITE
+                  <Typography variant='h6' sx={{ fontWeight: 200 }}>PERSONAL WEBSITE
                     <a href="https://rabinbikramthapa.netlify.app/" target="_blank"> (rabinbikramthapa.netlify.app)</a> <br />Next JS, Material UI</Typography>
 
                 </Stack>
-                <Stack direction={'row'} spacing={3} sx={{ color: '#ccc' ,pt:2}} divider={<Divider orientation="vertical" flexItem variant='middle' />}>
-                  <Typography variant='h4' sx={{ fontWeight: 400 }} >Major Project</Typography>
-                  <Typography variant='h5' sx={{ fontWeight: 200 }}>Suspicious Human Activity Detection<br />
-                    <a href="https://github.com/RabinThapa1998/Action-Recognition-Major-project-" target="_blank"> (Action-Recognition-Major-project)</a><br />&nbsp;&nbsp;Deep Learning, Pytorch, Python ,2D-CNN, 3D-CDD, YOLO v5, SQlite
+                <Stack direction={'row'} spacing={{ lg: 3, xs: 1 }} sx={{ color: '#ccc', pt: 2 }} divider={<Divider orientation="vertical" flexItem variant='middle' />}>
+                  <Typography variant='h5' sx={{ fontWeight: 400 }} >Major Project</Typography>
+                  <Typography variant='h6' sx={{ fontWeight: 200 }}>Suspicious Human Activity Detection<br />
+                    <a href="https://github.com/RabinThapa1998/Action-Recognition-Major-project-" target="_blank"> (Action-Recognition-Major-project)</a><br />Deep Learning, Pytorch, Python ,2D-CNN, 3D-CDD, YOLO v5, SQlite
                   </Typography>
 
                 </Stack>
-                <Stack direction={'row'} spacing={3} sx={{ color: '#ccc' ,pt:2}} divider={<Divider orientation="vertical" flexItem variant='middle' />}>
-                  <Typography variant='h4' sx={{ fontWeight: 400 }} >Minor Project</Typography>
-                  <Typography variant='h5' sx={{ fontWeight: 200 }}>Mero Wallet(Expense tracking app) <br />
-                    <a href="https://github.com/RabinThapa1998/MeroWallet-Minor1" target="_blank"> (Mero Wallet)</a><br />&nbsp;&nbsp;Android Studio, Java, SQlite
+                <Stack direction={'row'} spacing={{ lg: 3, xs: 1 }} sx={{ color: '#ccc', pt: 2 }} divider={<Divider orientation="vertical" flexItem variant='middle' />}>
+                  <Typography variant='h5' sx={{ fontWeight: 400 }} >Minor Project</Typography>
+                  <Typography variant='h6' sx={{ fontWeight: 200 }}>Mero Wallet(Expense tracking app) <br />
+                    <a href="https://github.com/RabinThapa1998/MeroWallet-Minor1" target="_blank"> (Mero Wallet)</a><br />Android Studio, Java, SQlite
                   </Typography>
 
 
                 </Stack>
-              </Stack>
+              </Stack> */}
             </Box>
+            <Box sx={{ pt: 5 }}>
+              <Swiper
+                // install Swiper modules
+                modules={[Navigation, Pagination, Scrollbar, A11y]}
+                spaceBetween={20}
+                slidesPerView="1"
+                navigation
+                // pagination={{ clickable: true }}
+                scrollbar={{ draggable: true }}
+
+                breakpoints={
+                  { // when window width is >= 320px
+                    425: {
+                      slidesPerView: 1,
+                      spaceBetween: 20
+                    },
+                    650: {
+                      slidesPerView: 2,
+                      spaceBetween: 20,
+                    },
+                    // when window width is >= 640px
+                    768: {
+                      slidesPerView: 3,
+                      spaceBetween: 20
+                    }
+                  }
+                }
+              >
+                <SwiperSlide >
+                  <Paper elevation={0} className='slides' sx={{textAlign:'center',py:5 }}>
+                  <Typography variant='h6' sx={{ fontWeight: 200 }}>TELEMEDICINE<br/>
+                    <a href="https://rural-telemedicine.herokuapp.com/" target="_blank">rural-telemedicine.herokuapp.com</a><br />React JS, Bootstrap
+                  </Typography>
+                  </Paper>
+                </SwiperSlide>
+                <SwiperSlide >
+                  <Paper elevation={0} className='slides' sx={{textAlign:'center',py:5 }}>
+                  <Typography variant='h6' sx={{ fontWeight: 200 }}>MORANG HOSPITAL<br/>
+                    <a href="https://moranghospital.netlify.app" target="_blank">moranghospital.netlify.app</a> <br />Next JS, Material UI</Typography>
+                  </Paper>
+                </SwiperSlide>
+                <SwiperSlide >
+                  <Paper elevation={0} className='slides' sx={{textAlign:'center', py:5}}>
+                  <Typography variant='h6' sx={{ fontWeight: 200 }}>Suspicious Human Activity Detection<br />
+                    <a href="https://github.com/RabinThapa1998/Action-Recognition-Major-project-" target="_blank"> (Action-Recognition-Major-project)</a><br />Deep Learning, Pytorch, Python ,2D-CNN, 3D-CDD, YOLO v5, SQlite
+                  </Typography> 
+                  </Paper>
+                </SwiperSlide>
+                <SwiperSlide >
+                  <Paper elevation={0} className='slides' sx={{textAlign:'center',py:5 }}>
+                    <Typography variant='h6' sx={{ fontWeight: 200 }}>Mero Wallet(Expense tracking app) <br />
+                      <a href="https://github.com/RabinThapa1998/MeroWallet-Minor1" target="_blank">Mero Wallet</a><br />Android Studio, Java, SQlite
+                    </Typography>
+                  </Paper>
+                </SwiperSlide>
+          
+                <SwiperSlide >
+                  <Paper elevation={0} className='slides' sx={{textAlign:'center' ,py:5}}>
+                  <Typography variant='h6' sx={{ fontWeight: 200 }}>PERSONAL WEBSITE<br/>
+                    <a href="https://rabinbikramthapa.netlify.app/" target="_blank"> rabinbikramthapa.netlify.app</a> <br />Next JS, Material UI</Typography>
+                  </Paper>
+                </SwiperSlide>
+                
+              </Swiper>
+            </Box>
+
+
+
           </Container>
           <Container className='bg section' id='services'>
             <Box>
-              <Typography variant='h1' sx={{ fontWeight: '700', textAlign: 'center', pt: 3, pb: 0, color: '#ccc' }} className='headingfontsize'>Services</Typography>
+              <Typography variant='h2' sx={{ fontWeight: '700', textAlign: 'center', pt: 3, pb: 0, color: '#ccc' }} className='headingfontsize'>Services</Typography>
               <Typography variant='h5' sx={{ textAlign: 'center', pb: 2 }} color='text.secondary'>You can hire me for the following works.</Typography>
             </Box>
             <Box>
               <Stack direction={'column'} spacing={1} sx={{ color: '#ccc', justifyContent: 'center' }} >
                 <Stack direction={'column'} spacing={1} sx={{ color: '#ccc', justifyContent: 'center' }} >
                   <Typography variant='h4' sx={{ fontWeight: 400, textAlign: 'center' }}>Front End</Typography>
-                  <Typography variant='h4' sx={{ fontWeight: 500,textAlign:'center' }}>REACT js ,NEXT js ,Material UI, Bootstrap</Typography>
+                  <Typography variant='h4' sx={{ fontWeight: 500, textAlign: 'center' }}>REACT js ,NEXT js ,Material UI, Bootstrap</Typography>
 
                 </Stack>
-                <Stack direction={'row'} spacing={4} sx={{ color: '#ccc', justifyContent: 'center', pt:3}} >
-                <Box >
-                  <Avatar alt="html" src="/img/html.png" sx={{ width: 50, height: 50, alignSelf: 'center' }}  variant="square" />
-                </Box>
-                <Box >
-                  <Avatar alt="html" src="/img/css.png" sx={{ width:50, height: 50, alignSelf: 'center' }}  variant="square" />
-                </Box>
-                <Box >
-                  <Avatar alt="html" src="/img/react.png" sx={{ width: 50, height: 50, alignSelf: 'center' }}  variant="square" />
-                </Box>
-                <Box >
-                  <Avatar alt="html" src="/img/nextjs.png" sx={{ width: 50, height: 50, alignSelf: 'center'}} className='invert'  variant="square" />
-                </Box>
-                  
+                <Stack direction={'row'} spacing={4} sx={{ color: '#ccc', justifyContent: 'center', pt: 3 }} >
+                  <Box >
+                    <Avatar alt="html" src="/img/html.png" sx={{ width: 50, height: 50, alignSelf: 'center' }} variant="square" />
+                  </Box>
+                  <Box >
+                    <Avatar alt="html" src="/img/css.png" sx={{ width: 50, height: 50, alignSelf: 'center' }} variant="square" />
+                  </Box>
+                  <Box >
+                    <Avatar alt="html" src="/img/react.png" sx={{ width: 50, height: 50, alignSelf: 'center' }} variant="square" />
+                  </Box>
+                  <Box >
+                    <Avatar alt="html" src="/img/nextjs.png" sx={{ width: 50, height: 50, alignSelf: 'center' }} className='invert' variant="square" />
+                  </Box>
+
 
                 </Stack>
               </Stack>
             </Box>
-             <Stack direction={'column'} sx={{ mt: 10 }}>
+            
+            <Stack direction={'column'} sx={{ mt: 10 }}>
               {/* <Typography variant='h5' sx={{ fontWeight: '500', textAlign: 'center', pt: 3, pb: 0, color: '#ccc' }}>Contacts</Typography> */}
-              <Typography variant='h5' sx={{ fontWeight: '500', textAlign: 'center', pt: 3, pb: 0, fontSize: '2rem', color: '#ccc' }}>Gmail <br /> rabinthapa.rbt@gmail.com</Typography>
-            </Stack> 
+              <Typography variant='body1' sx={{ fontWeight: '200', textAlign: 'center', mt:2, pb: 1, color: '#ccc' ,fontSize:'2rem'}}>MAIL <br /> <a href = "mailto:  rabinthapa.rbt@gmail.com" className='linkhover'> rabinthapa.rbt@gmail.com</a>
+</Typography>
+            </Stack>
+       
           </Container>
         </Container>
       </Container>

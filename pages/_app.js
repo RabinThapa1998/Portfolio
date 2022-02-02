@@ -1,4 +1,10 @@
 import '../styles/globals.css'
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import 'swiper/css/scrollbar';
+import "swiper/css/effect-fade";
+import "swiper/css/effect-cards";
 import Layout from '../components/Layout'
 import { createTheme, ThemeProvider, styled } from '@mui/material/styles';
 import { useState, useEffect } from 'react';
