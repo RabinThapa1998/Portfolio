@@ -73,25 +73,25 @@ export default function Home() {
               <Typography variant='h6'>ART</Typography>
             </Stack>
 
-            <Stack direction={'row'} spacing={4} sx={{ color: '#ccc', justifyContent: 'center', alignItems: 'end', mt: 5 }} >
+            <Stack direction={'row'} spacing={4} sx={{ color: '#ccc', justifyContent: 'center', alignItems: 'end', mt: 8 }} >
               <Box>
-                <a href="https://www.instagram.com/rabin.bikram.thapa/" target="_blank">
-                  <Avatar alt="html" src="/img/instagram.png" sx={{ width: 50, height: 50, alignSelf: 'center' }} variant="square" />
+                <a href="https://www.instagram.com/rabin.bikram.thapa/" target="_blank" >
+                  <Avatar alt="html" src="/img/instagram.png" sx={{ width: 50, height: 50, alignSelf: 'center' }} variant="square" className='invert'/>
                 </a>
               </Box>
               <Box >
                 <a href="https://www.facebook.com/rabin.thapa.3979489" target="_blank">
-                  <Avatar alt="html" src="/img/facebook.png" sx={{ width: 50, height: 50, alignSelf: 'center' }} variant="square" />
+                  <Avatar alt="html" src="/img/facebook.png" sx={{ width: 50, height: 50, alignSelf: 'center' }} variant="square"  className='invert' />
                 </a>
               </Box>
               <Box >
                 <a href="https://github.com/RabinThapa1998" target="_blank">
-                  <Avatar alt="html" src="/img/github.png" sx={{ width: 50, height: 50, alignSelf: 'center' }} variant="square" />
+                  <Avatar alt="html" src="/img/github.png" sx={{ width: 50, height: 50, alignSelf: 'center' }} variant="square"  className='invert' />
                 </a>
               </Box>
               <Box >
                 <a href="https://twitter.com/imrabin1998" target="_blank">
-                  <Avatar alt="html" src="/img/twitter.png" sx={{ width: 50, height: 50, alignSelf: 'center' }} variant="square" />
+                  <Avatar alt="html" src="/img/twitter.png" sx={{ width: 50, height: 50, alignSelf: 'center' }} variant="square"   className='invert'/>
                 </a>
               </Box>
 
@@ -264,7 +264,7 @@ export default function Home() {
             
             <Stack direction={'column'} sx={{ mt: 10 }}>
               {/* <Typography variant='h5' sx={{ fontWeight: '500', textAlign: 'center', pt: 3, pb: 0, color: '#ccc' }}>Contacts</Typography> */}
-              <Typography variant='body1' sx={{ fontWeight: '200', textAlign: 'center', mt:2, pb: 1, color: '#ccc' ,fontSize:'2rem'}}>MAIL <br /> <a href = "mailto:  rabinthapa.rbt@gmail.com" className='linkhover'> rabinthapa.rbt@gmail.com</a>
+              <Typography variant='body1' sx={{ fontWeight: '200', textAlign: 'center', mt:2, pb: 1, color: '#ccc' ,fontSize:'2rem'}}>MAIL AT <br /> <a href = "mailto:  rabinthapa.rbt@gmail.com" className='linkhover'> rabinthapa.rbt@gmail.com</a>
 </Typography>
             </Stack>
        

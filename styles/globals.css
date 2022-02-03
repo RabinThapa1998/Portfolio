@@ -27,8 +27,14 @@ body{
 .headingfontsize{
   font-size: clamp(4rem,8vw,8rem);
 }
-.invert { filter: invert(100%); }
+.invert { 
+  filter: invert(95%); 
+transition: filter 0.5s ease;
+}
 
+.invert:hover{
+  filter: invert(0%);
+}
 .bg{ 
   aspect-ratio: 900/300;
   background-position: center;
