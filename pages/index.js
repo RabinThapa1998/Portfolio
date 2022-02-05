@@ -8,6 +8,7 @@ import { useState } from 'react';
 import Link from 'next/link';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, Scrollbar, A11y, Autoplay, EffectFade, EffectCards } from 'swiper';
+import DownloadIcon from '@mui/icons-material/Download';
 
 export default function Home() {
   const size = 30
@@ -253,7 +254,7 @@ export default function Home() {
                 </Stack>
                 <Stack direction={'row'} spacing={2} sx={{ color: '#ccc', justifyContent: 'center', pt: 3 }} >
                   <Box >
-                    <Avatar alt="html" src="/img/html.png" sx={{ width: size , height: size, alignSelf: 'center' }} variant="square" />
+                    <Avatar alt="html" src="/img/html.png" sx={{ width: size, height: size, alignSelf: 'center' }} variant="square" />
                   </Box>
                   <Box >
                     <Avatar alt="html" src="/img/css.png" sx={{ width: size, height: size, alignSelf: 'center' }} variant="square" />
@@ -271,9 +272,19 @@ export default function Home() {
             </Box>
 
             <Stack direction={'column'} sx={{ mt: 10 }}>
-              {/* <Typography variant='h5' sx={{ fontWeight: '500', textAlign: 'center', pt: 3, pb: 0, color: '#ccc' }}>Contacts</Typography> */}
-              <Typography variant='body1' sx={{ fontWeight: '200', textAlign: 'center', mt: 2, pb: 1, color: '#ccc', fontSize: '2rem' }}>MAIL AT <br /> <a href="mailto:  rabinthapa.rbt@gmail.com" className='linkhover'> rabinthapa.rbt@gmail.com</a>
-              </Typography>
+              <Box sx={{display:'flex ' ,flexDirection:'column',justifyContent:'center',alignItems:'center'}}>
+                <a href="/cv.pdf" target='_blank' rel="noopener noreferrer">
+                  <Stack direction='row' spacing={0}>
+                    <Typography variant='body1' sx={{ fontWeight: '500', textAlign: 'center' }}>Download CV
+                    </Typography>
+                    <DownloadIcon></DownloadIcon>
+                  </Stack>
+                </a>
+              </Box>
+              <Box>
+                <Typography variant='body1' sx={{ fontWeight: '200', textAlign: 'center', mt: 2, pb: 1, color: '#ccc', fontSize: '2rem' }}>MAIL AT <br /> <a href="mailto:  rabinthapa.rbt@gmail.com" className='linkhover'> rabinthapa.rbt@gmail.com</a>
+                </Typography>
+              </Box>
             </Stack>
 
           </Container>
