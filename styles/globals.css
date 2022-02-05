@@ -97,7 +97,9 @@ transition: filter 0.5s ease;
 
 .slides{
   width: auto !important;
-  height: 200px !important;
+  height: 300px !important;
+  display: grid;
+  place-items: center;
 }
 
 .linkhover{
