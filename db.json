@@ -1,0 +1,46 @@
+{
+    "projects":[
+        {
+            "pname":"TELEMEDICINE",
+            "link":"https://rural-telemedicine.herokuapp.com/",
+            "linkname":"rural-telemedicine.herokuapp.com<",
+            "tech":"React JS, Bootstrap"
+        },
+        {
+            "pname":"MORANG HOSPITAL",
+            "link":"https://moranghospital.netlify.app",
+            "linkname":"moranghospital.netlify.app",
+            "tech":"Next JS, Material UI"
+        },
+        {
+            "pname":"Suspicious Human Activity Detection",
+            "link":"https://github.com/RabinThapa1998/Action-Recognition-Major-project-",
+            "linkname":"Action-Recognition-Major-project",
+            "tech":"Deep Learning, Pytorch, Python ,2D-CNN, 3D-CDD, YOLO v5, SQlite"
+        },
+        {
+            "pname":"Mero Wallet(Expense tracking app)",
+            "link":"https://github.com/RabinThapa1998/MeroWallet-Minor1",
+            "linkname":"Mero Wallet",
+            "tech":"Android Studio, Java, SQlite"
+        },
+        {
+            "pname":"PERSONAL WEBSITE",
+            "link":"https://rabinbikramthapa.netlify.app/",
+            "linkname":"rabinbikramthapa.netlify.app",
+            "tech":"Next JS,Material UI"
+        },
+        {
+            "pname":"Wolmart Home page replica",
+            "link":"https://rabinthapa1998.github.io/Wolmart/",
+            "linkname":"Wolmart",
+            "tech":"Bootstrap v5 and Swiper js"
+        },
+        {
+            "pname":"Nepal Trip Advisor clone",
+            "link":"https://nepaltripadvisor.netlify.app/",
+            "linkname":"Nepal Tripadvisor",
+            "tech":"Next JS,Material UI"
+        }
+    ]
+}

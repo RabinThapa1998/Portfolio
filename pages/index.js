@@ -9,7 +9,7 @@ import Link from 'next/link';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, Scrollbar, A11y, Autoplay, EffectFade, EffectCards } from 'swiper';
 import DownloadIcon from '@mui/icons-material/Download';
-
+import data from '../db.json';
 export default function Home() {
   const size = 30
   const [cancel, setCancel] = useState(false)
@@ -192,47 +192,17 @@ export default function Home() {
                   }
                 }
               >
-                <SwiperSlide >
-                  <Paper elevation={0} className='slides' sx={{ textAlign: 'center' }}>
-                    <Typography variant='h6' sx={{ fontWeight: 200 }}>TELEMEDICINE<br />
-                      <a href="https://rural-telemedicine.herokuapp.com/" target="_blank" >rural-telemedicine.herokuapp.com</a><br />React JS, Bootstrap
-                    </Typography>
-                  </Paper>
-                </SwiperSlide>
-                <SwiperSlide >
-                  <Paper elevation={0} className='slides' sx={{ textAlign: 'center' }}>
-                    <Typography variant='h6' sx={{ fontWeight: 200 }}>MORANG HOSPITAL<br />
-                      <a href="https://moranghospital.netlify.app" target="_blank">moranghospital.netlify.app</a> <br />Next JS, Material UI</Typography>
-                  </Paper>
-                </SwiperSlide>
-                <SwiperSlide >
-                  <Paper elevation={0} className='slides' sx={{ textAlign: 'center' }}>
-                    <Typography variant='h6' sx={{ fontWeight: 200 }}>Suspicious Human Activity Detection<br />
-                      <a href="https://github.com/RabinThapa1998/Action-Recognition-Major-project-" target="_blank"> Action-Recognition-Major-project</a><br />Deep Learning, Pytorch, Python ,2D-CNN, 3D-CDD, YOLO v5, SQlite
-                    </Typography>
-                  </Paper>
-                </SwiperSlide>
-                <SwiperSlide >
-                  <Paper elevation={0} className='slides' sx={{ textAlign: 'center' }}>
-                    <Typography variant='h6' sx={{ fontWeight: 200 }}>Mero Wallet(Expense tracking app) <br />
-                      <a href="https://github.com/RabinThapa1998/MeroWallet-Minor1" target="_blank">Mero Wallet</a><br />Android Studio, Java, SQlite
-                    </Typography>
-                  </Paper>
-                </SwiperSlide>
 
-                <SwiperSlide >
-                  <Paper elevation={0} className='slides' sx={{ textAlign: 'center' }}>
-                    <Typography variant='h6' sx={{ fontWeight: 200 }}>PERSONAL WEBSITE<br />
-                      <a href="https://rabinbikramthapa.netlify.app/" target="_blank"> rabinbikramthapa.netlify.app</a> <br />Next JS, Material UI</Typography>
-                  </Paper>
-                </SwiperSlide>
-
-                <SwiperSlide >
-                  <Paper elevation={0} className='slides' sx={{ textAlign: 'center' }}>
-                    <Typography variant='h6' sx={{ fontWeight: 200 }}>Wolmart Home page replica<br />
-                      <a href="https://rabinthapa1998.github.io/Wolmart/" target="_blank">Wolmart</a> <br />Bootstrap v5 and Swiper js</Typography>
-                  </Paper>
-                </SwiperSlide>
+                {data.projects.map(eachdata => {
+                  return (
+                    <SwiperSlide >
+                      <Paper elevation={0} className='slides' sx={{ textAlign: 'center' }}>
+                        <Typography variant='h6' sx={{ fontWeight: 200 }}>{eachdata.pname}<br />
+                          <a href={eachdata.link} target="_blank" className='linkhover' >{eachdata.linkname}</a><br />{eachdata.tech}</Typography>
+                      </Paper>
+                    </SwiperSlide>
+                  )
+                })}
 
               </Swiper>
             </Box>
@@ -248,8 +218,7 @@ export default function Home() {
             <Box>
               <Stack direction={'column'} spacing={1} sx={{ color: '#ccc', justifyContent: 'center' }} >
                 <Stack direction={'column'} spacing={1} sx={{ color: '#ccc', justifyContent: 'center' }} >
-                  <Typography variant='h4' sx={{ fontWeight: 400, textAlign: 'center' }}>Front End</Typography>
-                  <Typography variant='h4' sx={{ fontWeight: 500, textAlign: 'center' }}>REACT js ,NEXT js ,Material UI, Bootstrap</Typography>
+                  <Typography variant='h4' sx={{ fontWeight: 500, textAlign: 'center' }}>REACT js ,NEXT js ,Material UI, Bootstrap, SQL, NO-SQL</Typography>
 
                 </Stack>
                 <Stack direction={'row'} spacing={2} sx={{ color: '#ccc', justifyContent: 'center', pt: 3 }} >
@@ -272,11 +241,10 @@ export default function Home() {
             </Box>
 
             <Stack direction={'column'} sx={{ mt: 10 }}>
-              <Box sx={{display:'flex ' ,flexDirection:'column',justifyContent:'center',alignItems:'center'}}>
-                <a href="/cv.pdf" target='_blank' rel="noopener noreferrer">
-                  <Stack direction='row' spacing={0}>
-                    <Typography variant='body1' sx={{ fontWeight: '500', textAlign: 'center' }}>Download CV
-                    </Typography>
+              <Box sx={{ display: 'flex ', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
+                <a href="/cv.pdf" target='_blank' rel="noopener noreferrer" className='linkhover' > 
+                  <Stack direction='row' spacing={0} sx={{justifyContent:'center',alignItems:'center'}}>
+                    <Typography variant='h5' sx={{ fontWeight: '500', textAlign: 'center' }} >Download CV</Typography>
                     <DownloadIcon></DownloadIcon>
                   </Stack>
                 </a>
