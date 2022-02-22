@@ -62,7 +62,7 @@ export default function Home() {
             <Box color={"common.white"} >
               <Stack direction="row" spacing={2} sx={{ justifyContent: 'center' }}>
                 {/* <Typography variant='h2' sx={{ fontWeight: '700', alignSelf: 'center', p: 0, m: 0, color: '#ccc' }} className='headingfontsize'>rabin</Typography> */}
-                <Avatar alt="Rabin Thapa" src="/img/pp.jpg" sx={{ width: 170, height: 170, alignSelf: 'center', mt: 15 }} />
+                <Avatar alt="Rabin Thapa" src="/img/pp.jpg" sx={{ width: 180, height: 180, alignSelf: 'center', mt: 15, objectPosition:"center"}} />
               </Stack>
               <Typography variant="h5" sx={{ textAlign: 'center', fontWeight: '500', color: '#ccc' }}>An IT Enthusiast</Typography>
               <Typography variant='h5' sx={{ textAlign: 'center', pt: 5 }} color='#fdfdfd'>"It's never too late, It's never too early"</Typography>
@@ -94,6 +94,11 @@ export default function Home() {
               <Box >
                 <a href="https://twitter.com/imrabin1998" target="_blank">
                   <Avatar alt="html" src="/img/twitter.png" sx={{ width: 50, height: 50, alignSelf: 'center' }} variant="square" className='invert' />
+                </a>
+              </Box>
+              <Box >
+                <a href="https://www.linkedin.com/in/rabin-thapa-b87a001a9/" target="_blank">
+                  <Avatar alt="html" src="/img/linkedin.png" sx={{ width: 50, height: 50, alignSelf: 'center' }} variant="square" className='invert' />
                 </a>
               </Box>
 
