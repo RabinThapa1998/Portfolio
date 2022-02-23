@@ -2,8 +2,8 @@
     "projects":[
         {
             "pname":"TELEMEDICINE",
-            "link":"https://rural-telemedicine.herokuapp.com/",
-            "linkname":"rural-telemedicine.herokuapp.com",
+            "link":"https://ruraltelemedicine.netlify.app/",
+            "linkname":"ruraltelemedicine.netlify.app",
             "tech":"React JS, Bootstrap"
         },
         {
